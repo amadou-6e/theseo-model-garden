@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "theseo-model-garden"
+version = "0.1.0a0"
+description = "Experimental voxel-encoder inference and artifact contracts"
+requires-python = ">=3.10"
+dependencies = ["numpy>=2.0", "torch>=2.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
